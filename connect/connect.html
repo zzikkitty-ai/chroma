@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chroma</title>
+
+    <!-- 웹폰트 연결 -->
+    <link rel="stylesheet" href="css/font.css">
+
+    <!-- aos 연결 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="../main_symbol.svg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <!-- inner_header -->
+        <div class="inner_header">
+            <!-- nav -->
+            <div id="nav">
+                <h1 class="logo">
+                    <a href="../main/index.html">
+                        <img src="./images/header/main_logo.svg" alt="메인로고">
+                    </a>
+                </h1>
+
+                <ul class="gnb">
+                    <li>
+                        <a href="../about/about.html" target="_blank">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="../experience/exhibition.html" target="_blank">EXPERIENCE</a>
+                    </li>
+                    <li>
+                        <a href="../object/object1.html" target="_blank">OBJECT</a>
+                    </li>
+                    <li>
+                        <a href="../connect/connect.html" target="_blank">CONNECT</a>
+                    </li>
+                </ul>
+
+                <!-- submenu -->
+                <!-- .gnb와 형제 요소로 구조를 짠다. -->
+                <!-- 너비값 100% 차지하는 배경색/ 포지션 위치 잡음 -->
+                <div class="submenu">
+
+                    <!-- 너비값/ 가운데 정렬 -->
+                    <div class="inner_submenu">
+                        <div class="sub_nav">
+                            <ul class="sub">
+                                <li><a href="../about/about.html" target="_blank">ABOUT US</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="../experience/exhibition.html" target="_blank">EXHIBITION</a></li>
+                                <li><a href="../experience/popup.html" target="_blank">POP-UP</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="../object/object1.html" target="_blank">chroma 시리즈</a></li>
+                                <li><a href="../object/object2.html" target="_blank">조선 백자의 재해석</a></li>
+                                <li><a href="../object/object3.html" target="_blank">jellycat</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="../connect/connect.html" target="_blank">CONNECT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- submenu -->
+
+                <div class="blur_box"></div>
+            </div>
+            <!-- nav -->
+        </div>
+        <!-- inner_header -->
+    </div>
+    <!-- header -->
+
+
+    <div id="connect_wrap">
+
+        <div class="inner_connect_wrap ">
+
+            <!-- 상단 타이틀 -->
+            <div class="connect_intro">
+                <p class="connect_logo_text">connect</p>
+                <span class="connect_line"></span>
+            </div>
+
+            <!-- 층별 안내 -->
+            <section class="floor_section">
+                <h2 class="section_title">층별 안내</h2>
+
+                <div class="floor_wrap">
+                    <!-- 왼쪽 이미지 -->
+                    <div class="floor_img">
+                        <img src="./images/info/info_desk.jpg" id="floor_img" alt="1층 인포데스크"">
+                    </div>
+
+                    <!-- 오른쪽 층 정보 -->
+                    <div class=" floor_info">
+                        <ul>
+                            <li class="active" data-img="./images/info/info_desk.jpg">
+                                <div class="floor_num">1F</div>
+                                <div class="floor_text">
+                                    <p class="floor_name">GALLERY</p>
+                                    <span>· INFORMATION</span>
+                                </div>
+                            </li>
+
+                            <li data-img="./images/info/cafe.jpg">
+                                <div class="floor_num">2F</div>
+                                <div class="floor_text">
+                                    <p class="floor_name">LOUNGE</p>
+                                    <span>· CAFE</span>
+                                    <span>· ART SHOP</span>
+                                </div>
+                            </li>
+
+                            <li data-img="./images/info/popup_space.jpg">
+                                <div class="floor_num">3F</div>
+                                <div class="floor_text">
+                                    <p class="floor_name">ART HALL</p>
+                                    <span>· WORKSHOP</span>
+                                    <span>· POP-UP STORE</span>
+                                </div>
+                            </li>
+
+                            <li data-img="./images/info/looptop.jpg">
+                                <div class="floor_num">4F</div>
+                                <div class="floor_text">
+                                    <p class="floor_name">LOOFTOP</p>
+                                    <span>· TERRACE</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 일정 안내 -->
+            <section class="schedule_section">
+                <h2 class="section_title">일정 안내</h2>
+
+                <div class="schedule_wrap">
+
+                    <!-- 왼쪽 프로그램 리스트 -->
+                    <div class="program_list">
+                        <div class="program_box">
+                            <p class="program_title">진행중 프로그램</p>
+                            <ul>
+                                <li> • &nbsp;09/08 ~ 09/22 &nbsp; 컬러 조형 대작전 채도</li>
+                                <li> • &nbsp;09/09 ~ 11/28 &nbsp; 전시 리스트(PH5)</li>
+                            </ul>
+                        </div>
+
+                        <div class="program_box">
+                            <p class="program_title">예정 프로그램</p>
+                            <ul>
+                                <li> • &nbsp;09/12 ~ 10/30 &nbsp; 전시 Balloon DOG</li>
+                                <li> • &nbsp;09/17 ~ 10/15 &nbsp; 팝업 PH5 Pendant</li>
+                            </ul>
+                        </div>
+
+                        <div class="program_box">
+                            <p class="program_title">종료 프로그램</p>
+                            <ul>
+                                <li> • &nbsp;08/14 ~ 09/04 &nbsp; 팝업 JELLYCAT</li>
+                                <li> • &nbsp;08/06 ~ 09/06 &nbsp; 전시 미니리본정원 회고전</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 오른쪽 달력 -->
+                    <div id="date">
+                        <table class="Calendar">
+                            <thead>
+                                <tr>
+                                    <td onclick="prevCalendar();" style="cursor:pointer;">
+                                        <img src="./images/info/arrow_gray_left.svg" alt="left">
+                                    </td>
+                                    <td colspan="5" class="calendar_title">
+                                        <span id="calYear"></span>년
+                                        <span id="calMonth"></span>월
+                                    </td>
+                                    <td onclick="nextCalendar();" style="cursor:pointer;">
+                                        <img src="./images/info/arrow_gray_right.svg" alt="right">
+                                    </td>
+                                </tr>
+                                <tr class="calendar_day">
+                                    <td>일</td>
+                                    <td>월</td>
+                                    <td>화</td>
+                                    <td>수</td>
+                                    <td>목</td>
+                                    <td>금</td>
+                                    <td>토</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- textflow -->
+    <div id="flow">
+        <p class="track">
+            &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+            <img class="textflow_symbol" src="./images/flow/textflow_symbol.png" alt="텍스트플로우 심볼">
+            &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+            <img src="./images/flow/textflow_symbol.png" alt="텍스트플로우 심볼">
+            &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+            <img src="./images/flow/textflow_symbol.png" alt="텍스트플로우 심볼">
+        </p>
+    </div>
+    <!-- textflow -->
+
+
+    <!-- connect -->
+    <div id="connect">
+        <div class="inner_connect">
+
+            <h3 class="section_title">오시는 길</h3>
+
+            <!-- 상단 -->
+            <div class="map_card connect_card">
+                <div class="top_left">
+                    <h1 class="connect_logo">
+                        <img src="./images/connect/main_logo.svg" alt="지도 메인로고">
+                    </h1>
+
+                    <p class="address">부산광역시 해운대구 APEC로 58</p>
+
+                    <div class="info_text">
+                        <p>매일 11:00 - 20:00</p>
+                        <p>contact@chroma.co.kr</p>
+                        <p class="number">051-789-0123</p>
+                    </div>
+
+                    <div class="button_wrap">
+                        <a href="https://maps.app.goo.gl/njZjbu2nGbTqbN8GA" target="_blank">
+                            <span class="connect_btn_txt">자세히보기</span>
+                            <span class="connect_btn_icon"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="top_right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.5944830422422!2d129.13449647646212!3d35.16673287275774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356892b86e135d51%3A0xe696ad78c526802b!2z67aA7IKw7Iuc66a966-47Iig6rSAIOuzuOq0gA!5e0!3m2!1sko!2skr!4v1775111711996!5m2!1sko!2skr"
+                        width="824" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- 하단 -->
+            <div class="connect_bottom_box">
+                <!-- 이용안내 -->
+                <div class="guide_card connect_card">
+                    <h2 class="connect_tit">이용안내</h2>
+                    <ul>
+                        <li>• 무료 관람 대상자</li>
+                        <li class="sub">&nbsp;&nbsp;-&nbsp;보호자 동반(필수) 7세 미만 어린이, 65세 이상, 장애인, 국가유공자, 독립유공자 등</li>
+                        <li>• 입장마감 시간 : 19시 30분</li>
+                        <li>• 휴관일 : 공휴일</li>
+
+                        <li>• 주차요금 : 10분당 400원(1일 최대 1만5천원), 대형/소형 동일적용</li>
+                    </ul>
+                </div>
+
+                <!-- 문의하기 -->
+                <div class="inquiry_card connect_card">
+                    <h2 class="connect_tit">문의하기</h2>
+
+                    <form>
+                        <div class="input_row">
+                            <input type="text" placeholder="이름" />
+                            <input type="text" placeholder="연락처" />
+                        </div>
+
+                        <textarea placeholder="문의 내용을 작성해주세요."></textarea>
+
+                        <div class="qna_btn_wrap">
+                            <button type="submit" class="submit_btn">
+                                <span>문의하기</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- connect -->
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="inner_footer">
+
+            <!-- 왼쪽 -->
+            <div class="footer_left">
+                <h2 class="footer_logo">
+                    <a href="../main/index.html">
+                        <img src="./images/footer/sub_logo1.svg" alt="푸터 서브 로고">
+                    </a>
+                </h2>
+
+                <p class="footer_info">
+                    부산광역시 해운대구 APEC로 58
+                    <span>051-789-0123</span>
+                    <span>contact@chroma.co.kr</span>
+                </p>
+
+                <p class="copyright">
+                    Copyright ⓒ CHROMA of Art Space.
+                </p>
+            </div>
+
+            <!-- 오른쪽 -->
+            <div class="footer_right">
+                <ul class="sns_list">
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="./images/footer/facebook.svg"
+                                alt="페이스북"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/footer/instagram.svg"
+                                alt="인스타그램"></a></li>
+                    <li><a href="https://section.blog.naver.com/" target="_blank"><img
+                                src="./images/footer/naverblog.svg" alt="네이버블로그"></a></li>
+                    <li><a href="https://www.tiktok.com/ko-KR/" target="_blank"><img src="./images/footer/tiktok.svg"
+                                alt="틱톡"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+
+
+
+    <!-- aos 연결 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- jQuery 오픈소스 -->
+    <script src="./js/jquery-4.0.0.min.js"></script>
+
+
+    <!-- js 파일 연결 -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
