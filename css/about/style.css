@@ -1,0 +1,874 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /* internet explorer */
+
+    -o-text-size-adjust: none;
+    /* 예전 opera */
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #444948;
+}
+
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    /* background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); */
+    z-index: 99;
+    box-sizing: border-box;
+
+    /* From https://css.glass 
+    background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.inner_header {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+#nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 32px;
+    margin: 30px 0 20px;
+}
+
+.gnb {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.gnb li a {
+    width: 120px;
+    display: block;
+    font-family: 'Paperozi';
+    font-weight: 600;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.gnb li a:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+/* submenu */
+.submenu {
+    width: 100%;
+    height: 150px;
+    padding: 30px 0;
+    color: #585858;
+    /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); */
+    /* border-top: 5px solid #b5121b; */
+
+    /* position 자식요소 */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.8);*/
+
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px); */
+}
+
+.inner_submenu {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.sub_nav {
+    display: flex;
+}
+
+.sub_nav li a {
+    width: 120px;
+    display: block;
+    padding: 10px 30px;
+}
+
+.sub_nav li a:hover {
+    width: 120px;
+    display: block;
+    padding: 10px 30px;
+    font-weight: 500;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.blur_box {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transition: all 0.5s;
+}
+
+#header.active .blur_box {
+    height: 310px;
+}
+
+
+
+#section1 {
+    width: 100%;
+    height: 3245px;
+    background: url(../../images/about/section1/gradation_background1.jpg) no-repeat center/ cover;
+    margin-top: -100px;
+    /* header 높이만큼 */
+    padding-top: 100px;
+    /* 콘텐츠 잘림 방지 */
+}
+
+.inner_section1 {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/* 상단 카피 */
+.headline_wrap {
+    padding: 110px 0 90px;
+    text-align: center;
+    font-family: 'Paperozi';
+    margin-top: 290px;
+}
+
+.fill_text {
+    position: relative;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    font-family: 'Paperozi';
+    font-size: 60px;
+    color: #EDECEC;
+    /* 기본 연한 글씨 */
+    overflow: hidden;
+}
+
+.fill_text+.fill_text {
+    margin-top: 8px;
+}
+
+/* 진한 글씨 레이어 */
+.fill_text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Paperozi';
+    color: #444948;
+    /* transition: width 3.6s ease; */
+}
+
+/* 1줄 (빠르게) */
+#line1::after {
+    color: #3b3b3b;
+    transition: width 2.2s ease;
+}
+
+/* 2줄 (느리게) */
+#line2::after {
+    color: #3b3b3b;
+    transition: width 3.4s ease;
+}
+
+/* 실행 클래스 */
+.fill_text.active::after {
+    width: 100%;
+}
+
+
+/* about 영역 */
+.about_block {
+    text-align: center;
+    margin: 400px 0 200px;
+}
+
+.section_label {
+    font-family: 'Paperozi';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #444948;
+    margin-bottom: 34px;
+}
+
+.about_img {
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about_img img {
+    width: 1055px;
+    margin: 0 auto;
+    display: block;
+}
+
+.about_desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #444948;
+    /* text-align: right; */
+    word-break: keep-all;
+    margin-top: 40px;
+}
+
+/* 채워지는 텍스트 효과 */
+.marquee {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.marquee_track {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee_track span {
+    flex-shrink: 0;
+    padding-right: 80px;
+    font-size: 42px;
+    line-height: 110px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #444948;
+    white-space: nowrap;
+}
+
+/* 채워지는 텍스트 효과 */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+/* 카드 */
+.card_list {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+
+.card {
+    width: 420px;
+    height: 723px;
+    text-align: center;
+}
+
+.card_img {
+    width: 100%;
+    height: 545px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_tit {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #444948;
+}
+
+.card_tit2 {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: 20px 0 15px;
+    color: #444948;
+}
+
+.card_txt2 {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444948;
+    word-break: keep-all;
+    margin-bottom: 30px;
+}
+
+
+.card p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444948;
+    word-break: keep-all;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+    .inner {
+        width: 92%;
+    }
+
+    .about_img,
+    .about_desc {
+        width: 100%;
+    }
+
+    .card_list {
+        gap: 20px;
+    }
+
+    .card {
+        width: calc((100% - 40px) / 3);
+    }
+}
+
+@media (max-width: 900px) {
+    .headline_wrap {
+        padding: 80px 0 70px;
+    }
+
+    .fill_text {
+        font-size: 28px;
+    }
+
+    .section_label {
+        font-size: 16px;
+    }
+
+    .about_desc {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .marquee_track span {
+        font-size: 26px;
+        line-height: 76px;
+    }
+
+    .card_list {
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 0 90px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .card_img {
+        height: 440px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+}
+
+/* 텍스트 플로우 */
+/* 애니메이션 만들기 */
+/* 모션이름 : flow01 */
+@keyframes flow01 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 모션이름 : flow02 */
+@keyframes flow02 {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+#flow {
+    height: 120px;
+    color: #444948;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+    margin-bottom: 250px;
+}
+
+#flow p {
+    font-family: 'Paperozi';
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 2;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.track {
+    animation: flow01 18s infinite linear;
+    padding: 15px 0;
+}
+
+.textflow_symbol img {
+    width: 65px;
+    height: 75px;
+}
+
+
+/* section2 */
+#section2 {
+    width: 100%;
+    height: 1870px;
+    background: url(../../images/about/section2/symbol_background.jpg) no-repeat center / cover;
+    overflow: hidden;
+    color: #fff;
+}
+
+.inner_section2 {
+    width: 1320px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* 타이틀 */
+.section2_title {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.section2_title h2 {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    margin-top: 250px;
+}
+
+.section2_title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 전체 컨텐츠 */
+.ci_wrap {
+    width: 100%;
+}
+
+/* 공통 박스 */
+.ci_box {
+    width: 1320px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 큰 박스 */
+.ci_box_large{
+    width: 1230px;
+    height: 306px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ci_box_large img{
+    display: block;
+    width: 610px;
+}
+/* 아래 2칸 */
+.ci_row {
+    width: 1230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 55px;
+    box-sizing: border-box;
+}
+
+.ci_box_left {
+    width: 767px;
+    height: 384px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.ci_box_right {
+    width: 439px;
+    height: 384px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.ci_box_left h3 {
+    font-family: 'Paperozi';
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+
+.ci_box_right h3 {
+    font-family: 'Paperozi';
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 90px;
+}
+
+.ci_box_left img {
+    margin: 0 auto;
+} 
+
+
+.left_flex,
+.right_flex{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.right_flex img{
+    display: block;
+    width: 110px;
+    height: auto;
+    margin: 0;
+}
+
+
+.sub_logo1{
+    display: block;
+    width: 310px;
+    height: auto;
+    margin: 0;
+}
+
+.sub_logo2{
+    display: block;
+    width: 236px;
+    height: auto;
+    margin: 0;
+}
+
+.ci_box_right img {
+    display: block;
+    margin: 0 auto;
+} 
+
+
+/* 설명글 */
+.ci_desc {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 58px;
+    word-break: keep-all;
+}
+
+/* 컬러박스 */
+.color_box {
+    width: 1230px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 28px 30px 32px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.color_box h3 {
+    font-family: 'Paperozi';
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.color_chip_wrap {
+    display: flex;
+    gap: 15px;
+}
+
+/* 1. chip에 position + transition 추가 */
+.chip {
+    height: 172px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 2. hover 시 검정으로 바뀌게 */
+.chip:hover {
+    transform: translateY(-6px);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 3. 텍스트 숨겨놓기 (기본 상태) */
+.chip::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 4. hover 시 텍스트 나오게 */
+.chip:hover::after {
+    opacity: 1;
+}
+
+/* 5. 각 컬러별 텍스트 넣기 */
+.chip01::after {
+    content: "#EDECEC\A C6 M4 Y4 K0";
+    white-space: pre;
+}
+
+.chip02::after {
+    content: "#585858\A C63 M55 Y55 K30";
+    white-space: pre;
+}
+
+.chip03::after {
+    content: "#444948\A C74 M64 Y64 K34";
+    white-space: pre;
+}
+
+.chip04::after {
+    content: "#F9E591\A C3 M7 Y52 K0";
+    white-space: pre;
+}
+
+.chip05::after {
+    content: "#8EADBD\A C46 M23 Y19 K0";
+    white-space: pre;
+}
+/* 컬러칩 */
+.chip01 {
+    width: 260px;
+    background: #e9e9e9;
+}
+
+.chip02 {
+    width: 260px;
+    background: #5a5a5a;
+}
+
+.chip03 {
+    width: 260px;
+    background: #4d5452;
+}
+
+.chip04 {
+    width: 172px;
+    background: #ead982;
+}
+
+.chip05 {
+    width: 172px;
+    background: #9bbfd6;
+}
+
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 200px;
+    background: #585858;
+    color: #EDECEC;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.inner_footer {
+    width: 1320px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 왼쪽 */
+.footer_logo img {
+    width: 150px;
+    margin: 20px 0;
+}
+
+.footer_info {
+    font-size: 13px;
+    color: #EDECEC;
+    margin-bottom: 10px;
+}
+
+.footer_info span {
+    margin-left: 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #EDECEC;
+}
+
+/* 오른쪽 */
+.sns_list {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sns_list li a img {
+    opacity: 0.5;
+    transition: all 0.1s;
+
+}
+
+.sns_list li a:hover img {
+    opacity: 1;
+}

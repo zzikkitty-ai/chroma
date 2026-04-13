@@ -1,0 +1,780 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /* internet explorer */
+
+    -o-text-size-adjust: none;
+    /* 예전 opera */
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #444948;
+}
+
+
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    /* background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); */
+    z-index: 99;
+    box-sizing: border-box;
+
+    /* From https://css.glass 
+    background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.inner_header {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+#nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 32px;
+    margin: 30px 0 20px;
+}
+
+.gnb {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.gnb li a {
+    width: 120px;
+    display: block;
+    font-family: 'Paperozi';
+    font-weight: 600;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.gnb li a:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+/* submenu */
+.submenu {
+    width: 100%;
+    height: 150px;
+    padding: 30px 0;
+    color: #585858;
+    /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); */
+    /* border-top: 5px solid #b5121b; */
+
+    /* position 자식요소 */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.8);*/
+
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px); */
+}
+
+.inner_submenu {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.sub_nav {
+    display: flex;
+}
+
+.sub_nav li a {
+    width: 120px;
+    display: block;
+    padding: 10px 30px;
+}
+
+.sub_nav li a:hover {
+    width: 120px;
+    display: block;
+    padding: 10px 30px;
+    font-weight: 500;
+
+    transform: scale(1.15);
+    transition: all 0.4s;
+}
+
+.blur_box {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transition: all 0.5s;
+}
+
+#header.active .blur_box {
+    height: 310px;
+}
+
+
+/* visual */
+#visual {
+    height: 950px;
+    background: #fff;
+}
+
+#visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* exhibition 공통 */
+#exhibition {
+    width: 100%;
+    background: #7b7b7b;
+    color: #fff;
+}
+
+/* section1 */
+#exhibition .section1 {
+    height: 1000px;
+    background: url(../../images/experience/exhibition/section1_background.jpg) no-repeat center / cover;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+#exhibition .section1 .inner_section1 {
+    width: 1320px;
+    height: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+}
+
+.section1_left {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.poster_box {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.poster_box img {
+    width: 500px;
+    height: auto;
+    display: block;
+}
+
+.section1_right {
+    width: 500px;
+}
+
+.text_box {
+    color: #fff;
+    position: relative;
+}
+
+.ex_title {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.ex_date {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    opacity: 0.95;
+}
+
+.title_line {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 34px;
+}
+
+.info_box {
+    margin-bottom: 34px;
+}
+
+.info_title {
+    font-family: 'Paperozi';
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    border-left: 5px solid #fff;
+    padding-left: 20px;
+}
+
+.info_desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    word-break: keep-all;
+    margin: 0 0 37px;
+}
+
+.info_list {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 92px;
+}
+
+.info_list li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.detail_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    /* 🔥 핵심: 유리 */
+    background: rgba(255, 255, 255, 0.5) url(../../images/experience/exhibition/arrow_yellow_right.svg) no-repeat center right 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* 🔥 부드러운 그림자 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    font-family: 'Paperozi';
+    font-size: 13px;
+    font-weight: 400;
+    color: #444948;
+
+    transition: all 0.3s;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+
+.detail_btn:hover {
+    font-family: 'Paperozi';
+    font-size: 13px;
+    font-weight: 400;
+    color: #444948;
+    background: rgba(255, 255, 255, 0.7) url(../../images/experience/exhibition/arrow_yellow_right.svg) no-repeat center right 15px;
+}
+
+/* section2 */
+#exhibition .section2 {
+    padding: 215px 0;
+    box-sizing: border-box;
+    background: #fff;
+    background: url(../../images/experience/exhibition/section2_background.jpg) no-repeat center / cover;
+}
+
+#exhibition .section2 .inner_section2 {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+#exhibition .section2 .ex_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.ex_text {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+
+.ex_text h3 {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.ex_text p {
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+#exhibition .section2 .ex_item2 {
+    padding: 0 70px;
+    justify-content: space-between;
+}
+
+.ex_img1,
+.ex_img3 {
+    width: 800px;
+}
+
+.ex_img2 {
+    width: 600px;
+}
+
+
+/* exhibition 밖에 있는 100% 가로너비
+section3 */
+.banner_wrap {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 120px;
+}
+
+.banner_item {
+    width: 50%;
+}
+
+.banner_item a,
+.banner_item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* section4 */
+#section4 {
+    height: 3484px;
+    background-color: #585858;
+}
+
+/* ================================
+   exhibit info wrap
+================================ */
+#exhibit_info_wrap {
+    width: 100%;
+    background: #585858;
+    color: #fff;
+    /* padding: 190px 0; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 공통 타이틀 */
+.exh_section_title {
+    font-family: 'Paperozi';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.exh_section_subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+/* ================================
+   공간 안내
+================================ */
+.exh_space_section {
+    margin-bottom: 190px;
+}
+
+.exh_space_inner {
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.exh_space_map {
+    margin-top: 60px;
+}
+
+.exh_space_map img {
+    display: block;
+    width: 860px;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.22));
+
+    transition: all 1s;
+}
+
+.exh_space_map img:hover {
+    display: block;
+    width: 860px;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.22));
+    transform: scale(1.2);
+}
+
+/* ================================
+   전시 후기
+================================ */
+.exh_review_section {
+    margin-bottom:222px;
+}
+
+.exh_review_inner {
+    width: 1320px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 65px;
+    text-align: center;
+
+}
+
+.exh_review_inner .exh_section_title {
+    margin-bottom: 25px;
+}
+
+.exh_review_inner .exh_section_subtitle {
+    margin-bottom: 5px;
+}
+
+.exh_review_rating {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.exh_review_score {
+    font-weight: 500;
+    color: #fff;
+    margin: 0 3px;
+}
+
+.exh_review_rating_star {
+    color: #f0d66b;
+    letter-spacing: 1px;
+    margin-left: 2px;
+}
+
+.exh_review_flow_wrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0 70px;
+}
+
+.exh_review_flow{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: max-content;
+    animation: exhFlowZigzag 45s linear infinite;
+}
+
+.exh_review_card{
+    position: relative;
+    flex-shrink: 0;
+    width: 550px;
+    height: 250px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.exh_review_card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 지그재그 2단만 */
+.exh_review_card:nth-child(odd){
+    transform: translateY(0);
+}
+
+.exh_review_card:nth-child(even){
+    transform: translateY(40px);
+}
+
+@media (max-width: 1200px){
+    .banner_wrap{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .banner_item{
+        width: 100%;
+    }
+
+    .exh_review_card{
+        width: 420px;
+        height: 191px;
+    }
+
+    .exh_review_card:nth-child(even){
+        transform: translateY(40px);
+    }
+}
+
+@keyframes exhFlowZigzag{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+/* ================================
+   예정 전시 / 지난 전시 공통
+================================ */
+.exh_upcoming_section,
+.exh_past_section {
+    width: 100%;
+}
+
+.exh_upcoming_section {
+    margin-bottom: 190px;
+}
+
+.exh_upcoming_inner,
+.exh_past_inner {
+    width: 1320px;
+    margin: 0 auto 178px;
+}
+
+.exh_display_item {
+    width: 760px;
+    margin: 60px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.exh_poster_box {
+    flex-shrink: 0;
+}
+
+.exh_poster_box img {
+    display: block;
+    width: 220px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s;
+}
+
+.exh_poster_box img:hover {
+    display: block;
+    width: 220px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    transform: scale(1.05);
+}
+
+
+.exh_display_textbox {
+    width: 380px;
+    color: #fff;
+}
+
+.exh_display_name {
+    font-family: 'Paperozi';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.exh_display_date {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 50px;
+}
+
+.exh_display_desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.88);
+    word-break: keep-all;
+}
+
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 200px;
+    background: #585858;
+    color: #EDECEC;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.inner_footer {
+    width: 1320px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 왼쪽 */
+.footer_logo img {
+    width: 150px;
+    margin: 20px 0;
+}
+
+.footer_info {
+    font-size: 13px;
+    color: #EDECEC;
+    margin-bottom: 10px;
+}
+
+.footer_info span {
+    margin-left: 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #EDECEC;
+}
+
+/* 오른쪽 */
+.sns_list {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sns_list li a img {
+    opacity: 0.5;
+    transition: all 0.1s;
+
+}
+
+.sns_list li a:hover img {
+    opacity: 1;
+}
