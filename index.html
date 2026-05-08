@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1360">
+  <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+  <title>chroma</title>
+
+  <!-- 웹폰트 연결 -->
+  <link rel="stylesheet" href="css/main/font.css">
+
+  <!-- aos 연결 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <!-- 외부 css 연결 -->
+  <link rel="stylesheet" href="css/main/style.css">
+
+  <!-- 파비콘 연결 -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- loading -->
+  <div id="loading">
+    <p class="loading_num">000</p>
+
+    <div class="loading_symbol">
+      <img src="images/main/loading/sub_symbol_opacity.svg" alt="loading symbol" class="symbol_base">
+
+      <div class="symbol_fill_wrap">
+        <img src="images/main/loading/sub_symbol.svg" alt="loading symbol" class="symbol_fill">
+      </div>
+    </div>
+
+    <p class="loading_text">PLEASE WAIT</p>
+  </div>
+
+  <div id="wrap">
+    <!-- header -->
+    <div id="header">
+      <!-- inner_header -->
+      <div class="inner_header">
+        <!-- nav -->
+        <div id="nav">
+          <h1 class="logo">
+            <a href="./index.html">
+              <img src="images/main/header/main_logo.svg" alt="메인로고">
+            </a>
+          </h1>
+
+          <ul class="gnb">
+            <li>
+              <a href="about.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="exhibition.html">EXPERIENCE</a>
+            </li>
+            <li>
+              <a href="object1.html">OBJECT</a>
+            </li>
+            <li>
+              <a href="connect.html">CONNECT</a>
+            </li>
+          </ul>
+
+          <!-- submenu -->
+          <!-- .gnb와 형제 요소로 구조를 짠다. -->
+          <!-- 너비값 100% 차지하는 배경색/ 포지션 위치 잡음 -->
+          <div class="submenu">
+
+            <!-- 너비값/ 가운데 정렬 -->
+            <div class="inner_submenu">
+              <div class="sub_nav">
+                <ul class="sub">
+                  <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+                <ul>
+                  <li><a href="exhibition.html">EXHIBITION</a></li>
+                  <li><a href="popup.html">POP-UP</a></li>
+                </ul>
+                <ul>
+                  <li><a href="object1.html">chroma 시리즈</a></li>
+                  <li><a href="object2.html">조선 백자의 재해석</a></li>
+                  <li><a href="object3.html">jellycat</a></li>
+                </ul>
+                <ul>
+                  <li><a href="connect.html">CONNECT</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- submenu -->
+
+          <div class="blur_box"></div>
+        </div>
+        <!-- nav -->
+      </div>
+      <!-- inner_header -->
+    </div>
+    <!-- header -->
+
+    <div id="visual_wrap">
+      <!-- visual -->
+      <div id="visual">
+
+        <div class="inner_visual">
+
+          <div class="top_box">
+            <h2 class="top_left">MINIMAL</h2>
+            <p class="top_right">
+              chroma는 최소한의 색을 더하여<br>
+              공간을 재해석하는 감각 중심의 복합문화공간입니다.
+            </p>
+          </div>
+
+          <div class="middle_box">
+            <h2 class="middle_left">COLOR,</h2>
+            <div class="text-container">
+              <div class="text-list">
+                <div>immersive</div>
+                <div>discover</div>
+                <div>collect</div>
+                <div>unwind</div>
+                <div>immersive</div> <!-- 🔥 첫 번째 복사 -->
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom_box">
+            <h2 class="bottom_left">MAXIMUM</h2>
+            <h2 class="bottom_right">CONTRAST.</h2>
+          </div>
+        </div>
+      </div>
+      <!-- visual -->
+
+      <!-- story -->
+      <div id="story">
+        <div class="inner_story">
+          <div class="story_text_box" data-aos="fade-right" data-aos-duration="1500">
+            <p class="story_title">
+              색이 공간을 바꾸는 순간,
+              <br>
+              CHROMA
+            </p>
+            <p class="story">
+              버려진 폐공간의 구조를 유지한 채
+              <br>
+              색과 빛을 더해 새로운 공간으로 재해석합니다.
+              <br>
+              <br>
+              CHROMA는 전시와 팝업, 그리고 다양한 오브제들이
+              <br>
+              하나의 흐름으로 이어지는 복합문화공간으로,
+              <br>
+              다양한 경험이 자연스럽게 이어지는 흐름을 만듭니다.
+              <br>
+              <br>
+              커피와 디저트, 전시와 오브제가 함께하는 공간 속에서
+              <br>
+              새로운 감각을 경험해 보세요.
+            </p>
+          </div>
+
+          <div class="story_img_box" data-aos="fade-left" data-aos-duration="1000">
+            <div class="main_building">
+              <img src="images/main/story/main_building.png" alt="메인외관">
+            </div>
+            <div class="main_moodboard">
+              <img src="images/main/story/main_moodboard.png" alt="메인무드보드">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- story -->
+    </div>
+
+    <!-- exhibition -->
+    <div id="exhibition">
+
+      <!-- inner_exhibition -->
+      <div class="inner_exhibition">
+
+        <!-- ex_top -->
+        <div class="ex_top">
+
+          <!-- ex_title_box -->
+          <div class="ex_title_box">
+            <p class="exhibition_title">EXHIBITION</p>
+            <p class="exhibition_text">
+              다양한 전시가 펼쳐집니다.<br>
+              chroma에서 새로운 경험을 만나보세요.
+            </p>
+          </div>
+
+          <!-- ex_nav -->
+          <div class="ex_nav">
+            <div class="prev"></div>
+            <div class="next"></div>
+          </div>
+
+        </div>
+
+        <!-- swiper 시작 -->
+        <div class="swiper mySwiper">
+
+          <!-- swiper-wrapper -->
+          <div class="swiper-wrapper">
+
+            <!-- swiper-slide 1 -->
+            <div class="swiper-slide">
+
+              <!-- slide_img_box slide_img01 -->
+              <div class="slide_img_box slide_img01">
+                <p class="ex_place">1F GALLERY</p>
+                <p class="ex_date">09.09. ~ 11.28.</p>
+              </div>
+              <!-- slide_img_box slide_img01 -->
+
+              <!-- slide_txt_box -->
+              <div class="slide_txt_box">
+                <p class="ex_title">채도 (彩度)</p>
+                <p class="ex_txt">
+                  색이 스며드는 순간,
+                  <br>
+                  공간은 또 다른 흐름이 된다.
+                </p>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                  <a href="exhibition.html" target="_blank">
+                    <span class="btn_txt">자세히보기</span>
+                    <span class="btn_icon"></span>
+                  </a>
+                </div>
+                <!-- btn_wrap -->
+              </div>
+              <!-- slide_txt_box -->
+
+            </div>
+            <!-- swiper-slide 1 -->
+
+
+            <!-- swiper-slide 2 -->
+            <div class="swiper-slide">
+              <div class="slide_img_box slide_img02">
+                <p class="ex_place">1F GALLERY</p>
+                <p class="ex_date">08.06. ~ 09.06.</p>
+              </div>
+
+              <div class="slide_txt_box">
+                <h3 class="ex_title">마리로랑생의 회고전</h3>
+                <p class="ex_txt">
+                  파스텔 색조와 유연한 형태로 구축된,
+                  <br>
+                  마리 로랑생의 회화 세계를 조명한다.
+                </p>
+                <div class="btn_wrap">
+                  <a href="exhibition.html" target="_blank">
+                    <span class="btn_txt">자세히보기</span>
+                    <span class="btn_icon"></span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <!-- swiper-slide 2 -->
+
+
+            <!-- swiper-slide 3 -->
+            <div class="swiper-slide">
+              <div class="slide_img_box slide_img03">
+                <p class="ex_place">1F GALLERY</p>
+                <p class="ex_date">09.12. ~ 10.30.</p>
+              </div>
+
+              <div class="slide_txt_box">
+                <h3 class="ex_title">Balloon DOG</h3>
+                <p class="ex_txt">
+                  동물을 모티프로 한 풍선 질감의 조형으로 확장한,<br>
+                  제프 쿤스의 조각 작업을 중심으로 전개된다.
+                </p>
+                <div class="btn_wrap">
+                  <a href="exhibition.html" target="_blank">
+                    <span class="btn_txt">자세히보기</span>
+                    <span class="btn_icon"></span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <!-- swiper-slide 3 -->
+
+          </div>
+          <!-- swiper-wrapper -->
+        </div>
+        <!-- swiper 끝 -->
+      </div>
+      <!-- inner_exhibition -->
+
+    </div>
+    <!-- exhibition -->
+
+
+    <!-- popup -->
+    <div id="popup">
+      <div class="inner_popup">
+
+        <div class="pg_title_box">
+          <h2 class="pg_title">POPUP &amp; GOODS</h2>
+          <p class="pg_subtitle">
+            팝업과 오브제가 만나는 공간
+            <br>
+            chroma에서 새로운 흐름을 경험해보세요.
+          </p>
+        </div>
+
+
+        <div class="pg_list">
+
+          <!-- block 1 -->
+          <div class="pg_item">
+            <div class="pg_top" data-aos="fade-right" data-aos-duration="1500">
+              <div class="pg_top_left">
+                <a href="#" class="pg_poster_img">
+                  <img src="images/main/popup/joseon_poster.png" alt="조선 백자의 재해석 포스터">
+                </a>
+              </div>
+
+
+              <div class="pg_top_right" data-aos="fade-left" data-aos-duration="1500">
+                <h3 class="pg_poster_title">조선 백자의 재해석</h3>
+                <p class="pg_poster_text">
+                  현대적인 감각으로 새롭게 풀어낸<br>
+                  조선 백자의 미감을 발견해보세요.
+                </p>
+                <a href="popup.html" target="_blank" class="pg_poster_btn" aria-label="조선 백자의 재해석 자세히 보기"></a>
+              </div>
+            </div>
+
+
+
+            <div class="pg_bottom" data-aos="fade-left" data-aos-duration="1500">
+
+              <div class="pg_bottom_left" data-aos="fade-left" data-aos-duration="1500">
+                <a href="#" class="pg_object_top_img">
+                  <img src="images/main/popup/joseon_plate.png" alt="조선 백자 트레이">
+                </a>
+                <a href="#" class="pg_object_bottom_img">
+                  <img src="images/main/popup/joseon_keyring.png" alt="조선 백자 키링">
+                </a>
+              </div>
+
+              <div class="pg_bottom_right">
+                <a href="#" class="pg_object_big_img">
+                  <img src="images/main/popup/joseon_apron.png" alt="조선 백자 앞치마">
+                </a>
+                <div class="pg_bottom_txt_box">
+                  <p>조선 백자 감성 오브제 컬렉션
+                    <span>굿즈 보러가기</span>
+
+                    <a href="object2.html" target="_blank" class="pg_object_btn" aria-label="조선 백자 상품 자세히 보기"></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- block 1 -->
+
+          <!-- block 2 -->
+          <div class="pg_item">
+            <div class="pg_top" data-aos="fade-right" data-aos-duration="1500">
+              <div class="pg_top_left">
+                <a href="#" class="pg_poster_img">
+                  <img src="images/main/popup/jellycat_poster.png" alt="젤리캣 포스터">
+                </a>
+              </div>
+
+
+              <div class="pg_top_right" data-aos="fade-left" data-aos-duration="1500">
+                <h3 class="pg_poster_title">젤리캣</h3>
+                <p class="pg_poster_text">
+                  나만의 포근한
+                  <br>
+                  젤리캣 친구를 만나보세요.
+                </p>
+                <a href="object3.html" target="_blank" class="pg_poster_btn" aria-label="젤리캣 자세히 보기"></a>
+              </div>
+            </div>
+
+
+
+            <div class="pg_bottom" data-aos="fade-left" data-aos-duration="1500">
+
+              <div class="pg_bottom_left">
+                <a href="#" class="pg_object_top_img">
+                  <img src="images/main/popup/jellycat_koala.png" alt="젤리캣 코알라">
+                </a>
+                <a href="#" class="pg_object_bottom_img">
+                  <img src="images/main/popup/jellycat_pigeon.png" alt="젤리캣 비둘기">
+                </a>
+              </div>
+
+              <div class="pg_bottom_right">
+                <a href="#" class="pg_object_big_img">
+                  <img src="images/main/popup/jellycat_rabbit.png" alt="젤리캣 토끼">
+                </a>
+                <div class="pg_bottom_txt_box">
+                  <p>귀여운 젤리캣 인형 팝업
+                    <span>굿즈 보러가기</span>
+
+                    <a href="object3.html" target="_blank" class="pg_object_btn" aria-label="젤리캣 자세히 보기"></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- block 2 -->
+
+          <!-- block 3 -->
+          <div class="pg_item">
+            <div class="pg_top" data-aos="fade-right" data-aos-duration="1500">
+              <div class="pg_top_left">
+                <a href="#" class="pg_poster_img">
+                  <img src="images/main/popup/ph5_poster.png" alt="루이스폴센 ph5 포스터">
+                </a>
+              </div>
+
+
+              <div class="pg_top_right">
+                <h3 class="pg_poster_title">louis poulsen</h3>
+                <p class="pg_poster_text">
+                  빛을 담는 형태,
+                  <br>
+                  PH 5 펜던트의 구조적 아름다움을 경험해보세요.
+                </p>
+                <a href="popup.html" target="_blank" class="pg_poster_btn" aria-label="루이스폴센 ph5 자세히 보기"></a>
+              </div>
+            </div>
+
+            <!-- block 3 -->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- textflow -->
+      <div id="flow">
+        <p class="track">
+          &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+          <img class="textflow_symbol" src="images/main/popup/textflow_symbol.png" alt="텍스트플로우 심볼">
+          &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+          <img src="images/main/popup/textflow_symbol.png" alt="텍스트플로우 심볼">
+          &nbsp;MINIMAL&nbsp;COLOR,&nbsp;MAXIMUM&nbsp;CONTRAST.&nbsp;
+          <img src="images/main/popup/textflow_symbol.png" alt="텍스트플로우 심볼">
+        </p>
+      </div>
+      <!-- textflow -->
+
+    </div>
+    <!-- popup -->
+
+    <!-- connect -->
+    <div id="connect">
+      <div class="inner_connect">
+
+        <!-- 상단 -->
+        <div class="map_card connect_card">
+          <div class="top_left">
+            <h1 class="connect_logo">
+              <img src="images/main/connect/main_logo.svg" alt="지도 메인로고">
+            </h1>
+
+            <p class="address">부산광역시 해운대구 APEC로 58</p>
+
+            <div class="info_text">
+              <p>매일 11:00 - 20:00</p>
+              <p>contact@chroma.co.kr</p>
+              <p class="number">051-789-0123</p>
+            </div>
+
+            <div class="button_wrap">
+              <a href="./connect.html" target="_blank">
+                <span class="connect_btn_txt">자세히보기</span>
+                <span class="connect_btn_icon"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="top_right">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.5944830422422!2d129.13449647646212!3d35.16673287275774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356892b86e135d51%3A0xe696ad78c526802b!2z67aA7IKw7Iuc66a966-47Iig6rSAIOuzuOq0gA!5e0!3m2!1sko!2skr!4v1775111711996!5m2!1sko!2skr"
+              width="824" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- 하단 -->
+        <div class="connect_bottom_box">
+          <!-- 이용안내 -->
+          <div class="guide_card connect_card">
+            <h2 class="connect_tit">이용안내</h2>
+            <ul>
+              <li>• 무료 관람 대상자</li>
+              <li class="sub">&nbsp;&nbsp;-&nbsp;보호자 동반(필수) 7세 미만 어린이, 65세 이상, 장애인, 국가유공자, 독립유공자 등</li>
+              <li>• 입장마감 시간 : 19시 30분</li>
+              <li>• 휴관일 : 공휴일</li>
+
+              <li>• 주차요금 : 10분당 400원(1일 최대 1만5천원), 대형/소형 동일적용</li>
+            </ul>
+          </div>
+
+          <!-- 문의하기 -->
+          <div class="inquiry_card connect_card">
+            <h2 class="connect_tit">문의하기</h2>
+
+            <form>
+              <div class="input_row">
+                <input type="text" placeholder="이름" />
+                <input type="text" placeholder="연락처" />
+              </div>
+
+              <textarea placeholder="문의 내용을 작성해주세요."></textarea>
+
+              <div class="qna_btn_wrap">
+                <button type="submit" class="submit_btn">
+                  <span>문의하기</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- connect -->
+
+
+
+    <!-- footer -->
+    <div id="footer">
+      <div class="inner_footer">
+
+        <!-- 왼쪽 -->
+        <div class="footer_left">
+          <h2 class="footer_logo">
+            <a href="index.html">
+              <img src="images/main/footer/sub_logo1.svg" alt="푸터 서브 로고">
+            </a>
+          </h2>
+
+          <p class="footer_info">
+            부산광역시 해운대구 APEC로 58
+            <span>051-789-0123</span>
+            <span>contact@chroma.co.kr</span>
+          </p>
+
+          <p class="copyright">
+            Copyright ⓒ CHROMA of Art Space.
+          </p>
+        </div>
+
+        <!-- 오른쪽 -->
+        <div class="footer_right">
+          <ul class="sns_list">
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/main/footer/facebook.svg"
+                  alt="페이스북"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="images/main/footer/instagram.svg"
+                  alt="인스타그램"></a></li>
+            <li><a href="https://section.blog.naver.com/" target="_blank"><img src="images/main/footer/naverblog.svg"
+                  alt="네이버블로그"></a></li>
+            <li><a href="https://www.tiktok.com/ko-KR/" target="_blank"><img src="images/main/footer/tiktok.svg"
+                  alt="틱톡"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+  </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- aos 연결 -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- jQuery 오픈소스 -->
+  <script src="./js/main/jquery-4.0.0.min.js"></script>
+
+
+  <!-- js 파일 연결 -->
+  <script src="./js/main/script.js"></script>
+</body>
+
+</html>
